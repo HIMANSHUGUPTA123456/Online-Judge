@@ -56,9 +56,15 @@ app.post("/register", async (req, res) => {
         });
         user.token = token;
         user.password = undefined;
-        res
-            .status(200)
-            .json({ message: "You have successfully registered!", user });
+        const options = {
+            expires: new Date(Date.now() + 1 * 24 * 60 * 60 * 1000),
+            httpOnly: true, 
+        };
+        res.status(200).cookie("token", token, options).json({
+            message: "You have successfully registered!",
+            success: true,
+            token,
+        });
     } catch (error) {
         console.log(error);
     }
@@ -95,10 +101,9 @@ app.post("/login", async (req, res) => {
         //store cookies
         const options = {
             expires: new Date(Date.now() + 1 * 24 * 60 * 60 * 1000),
-            httpOnly: true, //only manipulate by server not by client/user
+            httpOnly: true, 
         };
-
-        //send the token
+        
         res.status(200).cookie("token", token, options).json({
             message: "You have successfully logged in!",
             success: true,
