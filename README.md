@@ -58,7 +58,6 @@ An online judge platform hosting coding problems and challenges. Users solve a s
 
 - **AI-Based RAG Model**: Assist users with an AI-based model that embeds problems and user solutions. Using an LLM model, generate natural language responses to help users learn better and solve problems more efficiently.
 
-https://github.com/HIMANSHUGUPTA123456/Online-Judge/blob/main/Assets/OJ/sm/dark/code.png?raw=true
 ## 🎨 Platform Visuals
 ### Default Website (Light Theme)
 <div align="center">
