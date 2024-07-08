@@ -1,0 +1,22 @@
+{
+  "name": "project-oj-mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx concurrently \"cd frontend && npm run dev\" \"cd backend && npx nodemon start\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/prismjs": "^1.26.4",
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@types/react": "^18.3.3",
+    "prismjs": "^1.29.0",
+    "react-simple-code-editor": "^0.13.1",
+    "typescript": "^5.4.5"
+  }
+}
